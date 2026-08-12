@@ -294,7 +294,9 @@ export function Dashboard({
                 </p>
               </div>
             </div>
-            <button className="open">Ouvrir la fiche complète</button>
+            <Link className="open" href={`/projets/${activeProject.id}`}>
+              Ouvrir la fiche complète
+            </Link>
           </article>
         </div>
       </section>
