@@ -790,6 +790,7 @@ h1 {
   margin: 4px 0 0;
 }
 .open {
+  display: block;
   width: 100%;
   margin-top: 16px;
   border: 0;
@@ -799,6 +800,144 @@ h1 {
   padding: 11px;
   font-size: 10px;
   font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.projectPage {
+  min-height: 100vh;
+  padding: 30px max(24px, calc((100vw - 1180px) / 2)) 60px;
+}
+.projectTopbar,
+.projectHero,
+.projectEyebrow,
+.projectHero p,
+.projectProgress > div {
+  display: flex;
+  align-items: center;
+}
+.projectTopbar {
+  justify-content: space-between;
+  margin-bottom: 28px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.projectBack {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+.projectBack svg,
+.projectHero p svg {
+  width: 15px;
+}
+.projectHero {
+  justify-content: space-between;
+  gap: 32px;
+  background: #123d30;
+  color: white;
+  border-radius: 18px;
+  padding: 34px 38px;
+}
+.projectEyebrow {
+  gap: 10px;
+}
+.projectEyebrow small {
+  color: #a9c1b8;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+.projectRisk {
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 9px;
+  font-weight: 800;
+}
+.projectRisk.normal { background: #198661; }
+.projectRisk.surveillance { background: #d79629; }
+.projectRisk.critique { background: #b84840; }
+.projectHero h1 {
+  max-width: 760px;
+  font-size: clamp(27px, 4vw, 42px);
+  margin: 16px 0 12px;
+}
+.projectHero p {
+  gap: 6px;
+  color: #b7cbc3;
+  font-size: 12px;
+  margin: 0;
+}
+.projectScore {
+  flex: 0 0 120px;
+  text-align: center;
+  border-left: 1px solid #315d4f;
+  padding-left: 28px;
+}
+.projectScore small,
+.projectScore b {
+  display: block;
+}
+.projectScore small,
+.projectScore span { color: #a8beb5; font-size: 9px; }
+.projectScore b { font: 700 42px Georgia, serif; margin: 7px 0 2px; }
+.projectKpis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 16px 0;
+}
+.projectKpis article,
+.projectCard {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+}
+.projectKpis article { padding: 18px; }
+.projectKpis small,
+.projectKpis b { display: block; }
+.projectKpis small { color: var(--muted); font-size: 9px; }
+.projectKpis b { font: 700 16px Georgia, serif; margin-top: 8px; }
+.projectGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.8fr);
+  gap: 14px;
+}
+.projectCard { padding: 24px; }
+.projectCard h2 { font: 700 18px Georgia, serif; margin: 0 0 20px; }
+.projectDescription { color: #5f7068; font-size: 12px; line-height: 1.7; }
+.projectProgress { margin: 18px 0 24px; }
+.projectProgress > div { justify-content: space-between; font-size: 11px; }
+.projectProgress i { display: block; height: 9px; background: #e9eeeb; border-radius: 9px; margin-top: 9px; overflow: hidden; }
+.projectProgress u { display: block; height: 100%; background: #177557; border-radius: 9px; }
+.projectProgress u.financial { background: #df952b; }
+.riskFindings { display: grid; gap: 10px; }
+.riskFindings > div,
+.riskClear { display: flex; gap: 10px; padding: 12px; border-radius: 9px; font-size: 10px; line-height: 1.5; }
+.riskFindings > div { background: #fff4f1; color: #9c3d36; }
+.riskClear { background: #edf8f3; color: #17694f; }
+.riskFindings svg,
+.riskClear svg { width: 16px; flex: none; }
+.projectInfo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.projectInfo > div { display: flex; gap: 10px; padding: 13px; background: #f5f7f5; border-radius: 9px; }
+.projectInfo svg { width: 17px; color: var(--green); flex: none; }
+.projectInfo small,
+.projectInfo b { display: block; }
+.projectInfo small { color: var(--muted); font-size: 8px; margin-bottom: 4px; }
+.projectInfo b { font-size: 10px; line-height: 1.4; }
+.emptyState { text-align: center; color: #7c8b84; padding: 20px 4px; }
+.emptyState svg { width: 28px; color: #9eaca6; }
+.emptyState b { display: block; font-size: 11px; margin: 10px 0 5px; color: #46564f; }
+.emptyState p { font-size: 9px; line-height: 1.5; margin: 0; }
+@media (max-width: 760px) {
+  .projectTopbar > span { display: none; }
+  .projectHero { align-items: flex-start; padding: 26px 22px; }
+  .projectScore { display: none; }
+  .projectKpis { grid-template-columns: 1fr 1fr; }
+  .projectGrid { grid-template-columns: 1fr; }
+  .projectInfo { grid-template-columns: 1fr; }
 }
 @media (max-width: 1000px) {
   .shell {
